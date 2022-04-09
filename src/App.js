@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Accordion from "./componets/Accordion";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const items = [
+    {
+        tittle:'Who is the Best Footballer in the World?',
+        content:'Messi'
+    },
+    {
+        tittle:'who win the Fifa world cup 2022 ?',
+        content:'Argentina'
+    },
+    {
+        tittle:'who is the most ballond,Dor winner?',
+        content:'Messi'
+    }
+];
 
-export default App;
+
+export default () => { 
+    return <div>
+        <Accordion item={items}/>
+    </div>;
+};
